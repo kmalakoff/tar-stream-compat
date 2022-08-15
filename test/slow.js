@@ -1,5 +1,5 @@
 var test = require('tape')
-var Writable = require('stream').Writable || require('readable-stream').Writable
+var Writable = require('../lib/readable-stream').Writable
 var zlib = require('zlib')
 var fs = require('fs')
 var log = require('single-line-log2').stdout

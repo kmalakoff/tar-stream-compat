@@ -111,7 +111,7 @@ var pack = tar.pack()
 var path = require('path')
 
 extract.on('entry', function(header, stream, callback) {
-  // let's prefix all names with 'tmp'
+  // var's prefix all names with 'tmp'
   header.name = path.join('tmp', header.name)
   // write the new entry to the pack stream
   stream.pipe(pack.entry(header, callback))

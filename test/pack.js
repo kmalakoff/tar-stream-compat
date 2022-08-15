@@ -1,10 +1,9 @@
 var test = require('tape')
-var tar = require('../index')
+var tar = require('..')
 var fixtures = require('./fixtures')
-var concat = require('concat-stream')
+var concat = require('./concat-stream')
 var fs = require('fs')
-var Writable = require('stream').Writable || require('readable-stream').Writable
-var bufferAlloc = require('buffer-alloc')
+var Writable = require('../lib/readable-stream').Writable
 var nextTick = require('next-tick')
 
 test('one-file', function (t) {
@@ -26,6 +25,8 @@ test('one-file', function (t) {
 
   pack.pipe(concat(function (data) {
     t.same(data.length & 511, 0)
+    console.log(data.length)
+    console.log(fs.readFileSync(fixtures.ONE_FILE_TAR).length)
     t.deepEqual(data, fs.readFileSync(fixtures.ONE_FILE_TAR))
   }))
 })
@@ -167,7 +168,7 @@ test('large-uid-gid', function (t) {
   pack.pipe(concat(function (data) {
     t.same(data.length & 511, 0)
     t.deepEqual(data, fs.readFileSync(fixtures.LARGE_UID_GID))
-    fs.writeFileSync('/tmp/foo', data)
+    // fs.writeFileSync('/tmp/foo', data)
   }))
 })
 
@@ -225,7 +226,7 @@ test('backpressure', function (t) {
         gid: 20
       }
 
-      var buffer = bufferAlloc(1024)
+      var buffer = Buffer.alloc(1024)
 
       pack.entry(header, buffer, next)
     } else {
