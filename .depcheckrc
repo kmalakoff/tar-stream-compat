@@ -1,1 +1,1 @@
-ignores: ["depcheck", "@babel/*", "rollup-*"]
+ignores: ["tar-stream-compat", "tar-stream"]
