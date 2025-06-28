@@ -8,3 +8,4 @@ const tar = major <= 10 ? _require('../../assets/tar-stream.cjs') : _require('ta
 
 export const extract = tar.extract as typeof t.extract;
 export const pack = tar.pack as typeof t.pack;
+export default { extract, pack };
