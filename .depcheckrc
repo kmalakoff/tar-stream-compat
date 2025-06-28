@@ -1,0 +1,1 @@
+ignores: ["tar-stream-compat", "tar-stream"]
