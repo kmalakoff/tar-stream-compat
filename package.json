@@ -60,7 +60,7 @@
     "buffer-fill": "*",
     "next-tick": "*",
     "pinkie-promise": "*",
-    "readable-stream": "^2.3.8",
+    "readable-stream": "^4.7.0",
     "single-line-log2": "*"
   },
   "engines": {
