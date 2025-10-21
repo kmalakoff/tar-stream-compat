@@ -1,6 +1,5 @@
 import assert from 'assert';
 import { Readable } from 'stream';
-// @ts-ignore
 import * as tar from 'tar-stream-compat';
 import BufferAlloc from '../../assets/buffer-alloc.cjs';
 
