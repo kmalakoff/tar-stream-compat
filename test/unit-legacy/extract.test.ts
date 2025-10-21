@@ -1,6 +1,5 @@
 import assert from 'assert';
 import fs from 'fs';
-// @ts-ignore
 import * as tar from 'tar-stream-compat';
 import * as fixtures from '../fixtures/index.ts';
 import concat from '../lib/concat-writeable.ts';

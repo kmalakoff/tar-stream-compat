@@ -1,7 +1,6 @@
 import assert from 'assert';
 import fs from 'fs';
 import Pinkie from 'pinkie-promise';
-// @ts-ignore
 import * as tar from 'tar-stream-compat';
 import * as fixtures from '../fixtures/index.ts';
 import concat from '../lib/concat-writeable.ts';

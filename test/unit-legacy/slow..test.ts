@@ -2,7 +2,6 @@ import assert from 'assert';
 import fs from 'fs';
 import { Writable } from 'readable-stream';
 import { stdout as log } from 'single-line-log2';
-// @ts-ignore
 import * as tar from 'tar-stream-compat';
 import zlib from 'zlib';
 import * as fixtures from '../fixtures/index.ts';

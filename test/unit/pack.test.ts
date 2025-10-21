@@ -1,7 +1,6 @@
 import assert from 'assert';
 import fs from 'fs';
 import { Writable } from 'readable-stream';
-// @ts-ignore
 import * as tar from 'tar-stream-compat';
 import BufferAlloc from '../../assets/buffer-alloc.cjs';
 import * as fixtures from '../fixtures/index.ts';
