@@ -1,1 +1,1 @@
-ignores: ["node-version-use", "ts-dev-stack", "@biomejs/biome", "tar-stream-compat", "tar-stream"]
+ignores: ["node-version-use", "ts-dev-stack", "tar-stream-compat", "tar-stream"]
